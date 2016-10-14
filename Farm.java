@@ -4,7 +4,7 @@ class Farm
 	private Animal[] aBunchOfAnimals = new Animal[3];
 	public Farm()
 	{
-		aBunchOfAnimals[0] = new Cow("cow","moo");
+		aBunchOfAnimals[0] = new NamedCow("cow","Elsie","moo");
 		aBunchOfAnimals[1] = new Chick("chick", "cluck", "cheep");
 		aBunchOfAnimals[2] = new Pig("pig", "oink");
 	}
@@ -15,6 +15,7 @@ class Farm
 		{
 			System.out.println(aBunchOfAnimals[nI].getType() + " goes " + aBunchOfAnimals[nI].getSound());
 		}
+		System.out.println("The cow is known as " + ((NamedCow)aBunchOfAnimals[0]).getName());
 	}
 
 }
